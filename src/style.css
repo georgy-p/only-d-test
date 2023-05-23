@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500;800&family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --family-main: 'PT Sans', sans-serif;
+  --family-extra: 'Bebas Neue', sans-serif;
+  --fs-desktop-base: 20px;
+  --fs-mobile-base: 14px;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Colors */
+  --white: #F4F5F9;
+  --black: #42567A;
+  --blue: #5D5FEF;
+  --pink: #EF5DA8;
+  --grey: rgb(226, 229, 235);
+  
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--family-main);
+  padding: 0;
+}
