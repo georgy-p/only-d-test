@@ -1,23 +1,32 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
 import styled from 'styled-components';
-import styles from './styles/index';
 import Background from './components/background/Background';
+import Title from './components/Title';
+import DataView from './components/DataView';
 
+// Надо сделать, чтобы при изменении ширины экрана до мобилки добавлялся мобильный вид со своими компонениами
 
-const Wrapper = styled.section`
+const Container = styled.section`
   margin: 0rem 7rem 0rem 14rem;
   height: 100vh;
-  border: 0.5px solid;
-  border-color: ${styles.colors.grey}
+`;
+
+const Content = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;
 
 const App = () => {
   return (
-  <Wrapper>
-    <Background />
-  </Wrapper>
-  )
+    <Container>
+      <Content>
+        <Background />
+        <Title />
+        <DataView />
+      </Content>
+    </Container>
+  );
 };
 
 export default App;
