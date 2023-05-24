@@ -2,9 +2,10 @@ const styles = {
   colors: {
     white: '#F4F5F9',
     grey: 'rgb(226, 229, 235)',
+    dark_grey: 'rgb(200, 203, 213)',
     dark_blue: '#42567A',
     blue: '#5D5FEF',
-    pink: '#EF5DA8'
+    pink: '#EF5DA8',
   },
   fonts: {
     main: `'PT Sans', sans-serif`,
@@ -13,7 +14,7 @@ const styles = {
     mobile_size: '14px',
     weight_regular: '400',
     weight_bold: '700',
-  }
+  },
 };
 
 export default styles;
