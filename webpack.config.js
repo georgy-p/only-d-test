@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -23,9 +23,12 @@ module.exports = {
       react: path.join(__dirname, 'node_modules', 'react'),
     },
   },
-  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
-    template: './src/index.html',
-  })],
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -37,7 +40,21 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader',],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'svg-react-loader',
+          options: {
+            tag: 'symbol',
+            attrs: {
+              title: 'example',
+            },
+            name: 'MyIcon',
+          },
+        },
       },
     ],
   },
