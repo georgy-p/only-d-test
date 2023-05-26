@@ -7,7 +7,7 @@ const { weight_bold } = styles.fonts;
 
 const TitleContainer = styled.div`
   position: absolute;
-  top: 8rem;
+  top: 5rem;
   width: 30rem;
   height: 7rem;
 `;
@@ -19,6 +19,10 @@ const VerticalLine = styled.div`
   transform: translateX(-50%);
   width: 5px;
   background: linear-gradient(${blue}, ${pink});
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const Text = styled.h1`
