@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import styles from '../../styles/index';
 
+const { grey, blue, pink } = styles.colors;
+
 const Border = styled.div`
   border: 0.5px solid;
-  border-color: ${styles.colors.grey};
+  border-color: ${grey};
   height: 100%;
+  position: relative;
 
   @media (max-width: 1000px) {
     display: none;
@@ -15,10 +18,10 @@ const Border = styled.div`
 const HorizontalLine = styled.div`
   position: absolute;
   left: 0;
+  right: 0;
   top: 45%;
-  transform: translateY(-50%);
   height: 1px;
-  background-color: ${styles.colors.grey};
+  background-color: ${grey};
 `;
 
 const VerticalLine = styled.div`
@@ -26,14 +29,24 @@ const VerticalLine = styled.div`
   top: 0;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
   width: 1px;
-  background-color: ${styles.colors.grey};
+  background-color: ${grey};
+`;
+
+const GradientLine = styled.div`
+  position: absolute;
+  top: 5rem;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 7rem;
+  width: 5px;
+  background: linear-gradient(${blue}, ${pink});
 `;
 
 const Background = () => {
   return (
     <Border>
+      <GradientLine />
       <HorizontalLine />
       <VerticalLine />
     </Border>
