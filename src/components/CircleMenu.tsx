@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import styles from '../styles';
 
 const CircleContainer = styled.div`
-  width: 450px;
-  height: 450px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 1000px) {
     display: none;
@@ -12,15 +16,14 @@ const CircleContainer = styled.div`
 `;
 
 const CircleStyled = styled.div`
-  z-index: 10;
-  height: 100%;
-  width: 101%;
+  width: 450px;
+  height: 450px;
   border: solid;
   border-radius: 50%;
   border-color: ${styles.colors.dark_grey};
 `;
 
-const CircleControl = () => {
+const CircleMenu = () => {
   return (
     <CircleContainer>
       <CircleStyled />
@@ -28,4 +31,4 @@ const CircleControl = () => {
   );
 };
 
-export default CircleControl;
+export default CircleMenu;
