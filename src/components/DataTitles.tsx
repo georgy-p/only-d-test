@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import styles from '../styles';
 
 const TitleContainer = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: row;
   width: 100%;
