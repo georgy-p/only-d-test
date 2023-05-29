@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Background from './components/background/Background';
-import Title from './components/Title';
-import DataView from './components/DataView';
+import Slider from './components/Slider';
+import CommonTitle from './components/CommonTitle';
 
-// Надо сделать, чтобы при изменении ширины экрана до мобилки добавлялся мобильный вид со своими компонениами
 const Container = styled.section`
   display: flex;
   justify-content: center;
@@ -13,25 +12,33 @@ const Container = styled.section`
   margin: 0;
   height: 100vh;
 
-  @media (min-width: 1000px) {
-    margin: 0 0 0 8%;
+  @media (min-width: 1300px) {
+    margin: 0 0 0 15%;
   }
 `;
 
-const Content = styled.div`
+const InnerContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
 `;
 
+const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  margin-left: 5%;
+`;
+
 const App = () => {
   return (
     <Container>
-      <Content>
+      <InnerContainer>
         <Background />
-        <Title />
-        <DataView />
-      </Content>
+        <Content>
+          <CommonTitle />
+          <Slider />
+        </Content>
+      </InnerContainer>
     </Container>
   );
 };
