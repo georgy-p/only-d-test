@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import data4 from '../data/data4';
+import data6 from '../appData/data6';
 import styled from 'styled-components';
 import CircleControl from './CircleControl';
 import DataTitles from './DataTitles';
 import Buttons from './Buttons';
+import DataItems from './dataItems/DataItems';
 
-const DataContainer = styled.div`
-  position: absolute;
-  top: 0;
+const SliderContainer = styled.div`
   width: 100%;
   height: 90%;
   display: flex;
@@ -15,20 +14,21 @@ const DataContainer = styled.div`
   justify-content: center;
 `;
 
-const DataView = () => {
-  const [currentSlide, setNewSlide] = useState<number>(3);
-  const data: {
+const Slider = () => {
+  const [currentSlide, setNewSlide] = useState<number>(6);
+  const currentData: {
     years: string[];
     events: { year: string; description: string }[];
-  } = data4[currentSlide];
+  } = data6[currentSlide];
 
   return (
-    <DataContainer>
-      <DataTitles years={data.years} />
+    <SliderContainer>
+      <DataTitles years={currentData.years} />
       <CircleControl />
       <Buttons />
-    </DataContainer>
+      <DataItems events={currentData.events} />
+    </SliderContainer>
   );
 };
 
-export default DataView;
+export default Slider;
