@@ -5,15 +5,12 @@ import styles from '../styles';
 const { fonts, colors } = styles;
 
 const TitleContainer = styled.div`
-  position: absolute;
-  top: 5rem;
-  width: 30rem;
+  margin-top: 5rem;
+  width: 20rem;
   height: 7rem;
 `;
 
 const Text = styled.h1`
-  margin-top: 0;
-  margin-left: 5rem;
   font-size: 3rem;
   color: ${colors.dark_blue};
   font-weight: ${fonts.weight_bold};
