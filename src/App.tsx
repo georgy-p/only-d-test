@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Background from './components/background/Background';
 import Slider from './components/Slider';
 import CommonTitle from './components/CommonTitle';
+import styles from './styles';
+import CircleMenu from './components/CircleMenu';
+import DataTitles from './components/DataTitles';
 
 const Container = styled.section`
   display: flex;
@@ -24,9 +27,22 @@ const InnerContainer = styled.div`
 `;
 
 const Content = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   margin-left: 5%;
+  margin-right: 5%;
+`;
+
+const MobileLine = styled.div`
+  position: absolute;
+  top: 50%;
+  border-bottom: solid ${styles.colors.grey};
+  width: 90%;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `;
 
 const App = () => {
@@ -34,8 +50,9 @@ const App = () => {
     <Container>
       <InnerContainer>
         <Background />
+        <CircleMenu />
         <Content>
-          <CommonTitle />
+          <MobileLine />
           <Slider />
         </Content>
       </InnerContainer>
