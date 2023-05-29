@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ButtonsContainer = styled.div`
-  position: absolute;
-  top: 70%;
-  left: 5rem;
   width: 120px;
   height: 100px;
   display: flex;
@@ -13,7 +10,7 @@ const ButtonsContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Circle = styled.div`
+const Circle = styled.button`
   border: solid;
   border-radius: 50%;
   border-color: #42567a;
@@ -22,7 +19,6 @@ const Circle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: stroke;
 `;
 
 const Arrow = styled.p`
