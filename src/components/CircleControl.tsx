@@ -14,7 +14,7 @@ const CircleContainer = styled.div`
 const CircleStyled = styled.div`
   z-index: 10;
   height: 100%;
-  width: 100%;
+  width: 101%;
   border: solid;
   border-radius: 50%;
   border-color: ${styles.colors.dark_grey};
