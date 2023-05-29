@@ -5,10 +5,12 @@ import styles from '../../styles/index';
 const { grey, blue, pink } = styles.colors;
 
 const Border = styled.div`
+  position: absolute;
   border: 0.5px solid;
   border-color: ${grey};
+  width: 100%;
   height: 100%;
-  position: relative;
+  z-index: -1;
 
   @media (max-width: 1000px) {
     display: none;
